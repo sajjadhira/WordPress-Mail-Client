@@ -9,11 +9,12 @@ Author URI: https://pluginoo.com
 License: GPLv2 or later
 Text Domain: mailclient
 */
+require_once plugin_dir_path(__FILE__) . 'Load.php';
 
 class MailClient
 {
-    public function __construct()
-    {
-        require_once plugin_dir_path(__FILE__) . 'init.php';
-    }
+    use Load;
 }
+
+$client = new MailClient;
+$client->init(__FILE__);

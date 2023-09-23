@@ -6,12 +6,14 @@ trait Database
     public function __construct()
     {
         $this->tables = [
-            'mailclient' => [
-                'id' => 'INT(11) NOT NULL AUTO_INCREMENT',
-                'name' => 'VARCHAR(255) NOT NULL',
-                'email' => 'VARCHAR(255) NOT NULL',
-                'subject' => 'VARCHAR(255) NOT NULL',
-                'message' => 'TEXT NOT NULL',
+            'clients' => [
+                'id' => 'bigint NOT NULL AUTO_INCREMENT',
+                'email' => 'varchar(255) NOT NULL',
+                'password' => 'varchar(255) NOT NULL',
+                'host' => 'varchar(255) NOT NULL',
+                'port' => 'varchar(255) NOT NULL',
+                'encription' => 'varchar(255) NULL',
+                'user_id' => 'bigint NULL',
                 'PRIMARY KEY' => '(id)'
             ]
         ];

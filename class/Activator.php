@@ -1,15 +1,18 @@
 <?php
-require_once plugin_dir_path(__FILE__) . 'Database.php';
+// require Database trait
+require_once 'Base.php';
+require_once 'Database.php';
 
 trait Activator
 {
+    use Base;
     use Database;
-    public function __construct()
+    public function activate($file)
     {
-        // require Database trait
-        register_activation_hook(__FILE__, [$this, 'activate']);
+        // register activation hook
+        register_activation_hook($file, [$this, 'insertTables']);
     }
-    public static function activate()
+    public function insertTables()
     {
 
         global $wpdb;;
@@ -18,15 +21,28 @@ trait Activator
         $tables = $this->tables;
 
         foreach ($tables as $key => $value) {
-            $table_name = $wpdb->prefix . $key;
+            $table_name = $wpdb->prefix . $this->pluginPrefix . $key;
             $charset_collate = $wpdb->get_charset_collate();
-            $sql = "CREATE TABLE IF NOT EXISTS $table_name (";
+            $sql = "CREATE TABLE `$table_name` (";
             foreach ($value as $k => $v) {
-                $sql .= $k . ' ' . $v . ', ';
+                // check if key is primary key
+                if ($k == 'PRIMARY KEY') {
+                    $sql .= '
+                    ' . $k . ' ' . $v . ' 
+                    ';
+                    continue;
+                }
+                $sql .= '
+                `' . $k . '` ' . $v . ', ';
             }
             $sql .= ") $charset_collate;";
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+
             dbDelta($sql);
+            // if table is not created then show error
+            if ($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
+                wp_die("Error creating table: $table_name , $wpdb->last_error " . ABSPATH);
+            }
         }
     }
 }
