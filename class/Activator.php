@@ -1,5 +1,5 @@
 <?php
-// require Database trait
+// include Base and Database traits
 require_once 'Base.php';
 require_once 'Database.php';
 
@@ -41,7 +41,7 @@ trait Activator
             dbDelta($sql);
             // if table is not created then show error
             if ($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
-                wp_die("Error creating table: $table_name , $wpdb->last_error " . ABSPATH);
+                wp_die("Error creating table: $table_name , $wpdb->last_error ");
             }
         }
     }

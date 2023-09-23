@@ -1,9 +1,7 @@
 <?php
 // include Base and Database traits
-
 require_once 'Base.php';
 require_once 'Database.php';
-
 
 trait Deactivator
 {
@@ -27,7 +25,11 @@ trait Deactivator
         foreach ($tables as $key => $value) {
             $table_name = $wpdb->prefix . $this->pluginPrefix . $key;
             $sql = "DROP TABLE IF EXISTS $table_name";
-            $wpdb->query($sql);
+            $del = $wpdb->query($sql);
+            // if table is not deleted then show error
+            if ($del === false) {
+                wp_die("Error deleting table: $table_name , $wpdb->last_error ");
+            }
         }
         // do something
     }
