@@ -1,0 +1,43 @@
+.emailclient {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.emailclient__content {
+  padding: 20px;
+  border-right: 1px solid #ffffff;
+  background-color: #ffffff;
+  min-height: 250px;
+  /* display: grid; */
+}
+
+.emailclient__card {
+  margin-bottom: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 10px;
+  height: 50px;
+  margin-left: 10px;
+  color: #ffffff;
+}
+.emailclient__card_col_2 {
+  width: 50%;
+}
+.emailclient__card_col_3 {
+  width: 33.3333333333%;
+}
+.emailclient__card_col_4 {
+  width: 25%;
+}
+.emailclient__bg_blue {
+  background-color: #007bff;
+  /*  add gradient */
+  background-image: linear-gradient(to bottom, #007bff, #006fe6);
+}
+.emailclient__bg_green {
+  background-color: #28a745;
+  /*  add gradient */
+  background-image: linear-gradient(to bottom, #28a745, #269f3e);
+}

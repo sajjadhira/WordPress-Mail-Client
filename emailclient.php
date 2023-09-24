@@ -1,20 +1,20 @@
 <?php
 /*
-Plugin Name: Mail Client
+Plugin Name: Email Client
 Plugin URI: https://pluginoo.com
 Description: A simple mail connection plugin
 Version: 1.0
 Author: Pluginoo
 Author URI: https://pluginoo.com
 License: GPLv2 or later
-Text Domain: mailclient
+Text Domain: emailclient
 */
 require_once plugin_dir_path(__FILE__) . 'Load.php';
 
-class MailClient
+class EmailClient
 {
     use Load;
 }
 
-$client = new MailClient;
+$client = new EmailClient;
 $client->init(__FILE__);
