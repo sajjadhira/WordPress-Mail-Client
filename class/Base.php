@@ -55,4 +55,18 @@ trait Base
         }
         return '<p class="' . $class . '">' . $text . '</p>';
     }
+
+    public function getEmail()
+    {
+        // get current user id
+        $user_id = get_current_user_id();
+        // get data from database for $this->pluginPrefix . 'cleints' table
+        global $wpdb;
+        $table_name = $wpdb->prefix . $this->pluginPrefix . 'clients';
+        $email = $wpdb->get_var("SELECT email FROM $table_name WHERE user_id = $user_id");
+        // if data is found return id and email
+        if ($email) {
+            return $email;
+        }
+    }
 }
