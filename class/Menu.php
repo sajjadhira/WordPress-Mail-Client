@@ -57,9 +57,9 @@ trait Menu
 
         echo $this->divStart($this->pluginPrefix . '_content');
 
-        echo $this->Card('Inbox', 10, $this->pluginCardColPrefix . '3 ' . $this->pluginPrefix . '_bg_green');
-        echo $this->Card('Sent', 30, $this->pluginCardColPrefix . '3 ' . $this->pluginPrefix . '_bg_blue');
-
+        echo $this->pluginDivCenter;
+        echo $this->p("You are loogged is as " . wp_get_current_user()->user_login, $this->pluginPrefix . '_content__user');
+        echo $this->divEnd;
         echo $this->divEnd;
 
 

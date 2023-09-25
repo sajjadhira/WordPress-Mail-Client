@@ -10,6 +10,7 @@ trait Base
     public $pluginOptionGroup = 'emailclient_options';
     public $pluginOptionName = 'emailclient_option';
     public $pluginStart = '<div class="wrap">';
+    public $pluginDivCenter = '<div class="text-center">';
     public $pluginEnd = '</div>';
     public $divEnd = '</div>';
 
@@ -45,5 +46,13 @@ trait Base
             <div class="' . $this->pluginPrefix . '_card__content">' . $content . '</div>
         </div>
         ';
+    }
+
+    public function p($text, $class = '')
+    {
+        if ($class == '') {
+            return '<p>' . $text . '</p>';
+        }
+        return '<p class="' . $class . '">' . $text . '</p>';
     }
 }
