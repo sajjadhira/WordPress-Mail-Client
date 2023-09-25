@@ -41,3 +41,8 @@
   /*  add gradient */
   background-image: linear-gradient(to bottom, #28a745, #269f3e);
 }
+
+.emailclient__card_title {
+  font-size: 25px;
+  font-weight: 800;
+}

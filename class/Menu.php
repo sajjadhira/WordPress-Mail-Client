@@ -22,6 +22,26 @@ trait Menu
             [$this, 'menuCallback'],
             'dashicons-email-alt'
         );
+
+        // add submenus
+        $submenus = [
+            'inbox' => 'Inbox',
+            'sent' => 'Sent',
+            'draft' => 'Draft',
+            'trash' => 'Trash',
+            'spam' => 'Spam',
+            'settings' => 'Settings',
+        ];
+        foreach ($submenus as $key => $value) {
+            add_submenu_page(
+                $this->pluginSlug,
+                $value,
+                $value,
+                'manage_options',
+                $this->pluginSlug . '_' . $key,
+                [$this, 'menuCallback']
+            );
+        }
     }
     public function menuCallback()
     {
