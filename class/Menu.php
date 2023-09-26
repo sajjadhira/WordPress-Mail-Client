@@ -58,7 +58,7 @@ trait Menu
         echo $this->divStart($this->pluginPrefix . '_content');
 
         echo $this->pluginDivCenter;
-        echo $this->p("You are loogged is as " . wp_get_current_user()->user_login, $this->pluginPrefix . '_content__user');
+        echo $this->p("You are loogged is as " . $this->getEmail(), $this->pluginPrefix . '_content__user');
         echo $this->divEnd;
         echo $this->divEnd;
 
