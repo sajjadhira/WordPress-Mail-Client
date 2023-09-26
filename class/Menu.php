@@ -2,10 +2,12 @@
 
 // include Base
 require_once 'Base.php';
+require_once 'Pages.php';
 
 trait Menu
 {
     use Base;
+    use Pages;
     public $file;
     public function menu($file)
     {
@@ -39,7 +41,7 @@ trait Menu
                 $value,
                 'manage_options',
                 $this->pluginSlug . '_' . $key,
-                [$this, 'menuCallback']
+                [$this, $this->pluginSlug . '_' . $key]
             );
         }
     }
