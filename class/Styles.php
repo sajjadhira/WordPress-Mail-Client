@@ -10,6 +10,6 @@ trait Styles
     public function css()
     {
         // enqueue css
-        $this->enqueCSS('tailwind.css');
+        $this->enqueCSS('tailwind');
     }
 }

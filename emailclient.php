@@ -9,6 +9,12 @@ Author URI: https://pluginoo.com
 License: GPLv2 or later
 Text Domain: emailclient
 */
+
+defined('WPINC') || die;
+
+define('PMC_PLUGIN_DIR', plugin_dir_path(__FILE__));
+define('PMC_PLUGIN_URL', plugin_dir_url(__FILE__));
+
 require_once plugin_dir_path(__FILE__) . 'Load.php';
 
 class EmailClient

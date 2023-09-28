@@ -1,12 +1,20 @@
 <?php
+// import Styles
+require_once 'Base.php';
+
+
 trait Pages
 {
 
-    public function __construct()
-    {
-    }
+    use Base;
+
+    // public function __construct()
+    // {
+    //     $this->css();
+    // }
     public function emailclient_inbox()
     {
+        $this->enqueCSS('tailwind');
         echo "Inbox";
     }
 
