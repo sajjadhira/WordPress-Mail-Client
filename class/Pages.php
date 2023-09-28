@@ -1,6 +1,10 @@
 <?php
 trait Pages
 {
+
+    public function __construct()
+    {
+    }
     public function emailclient_inbox()
     {
         echo "Inbox";
