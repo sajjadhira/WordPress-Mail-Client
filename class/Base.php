@@ -17,12 +17,12 @@ trait Base
 
     public function enqueCSS($file)
     {
-        wp_enqueue_style($this->pluginSlug, PMC_PLUGIN_URL . 'assets/css/' . $file . '.css', [], $this->pluginVersion, 'all');
+        wp_enqueue_style($this->pluginSlug, PEMC_PLUGIN_URL . 'assets/css/' . $file . '.css', [], $this->pluginVersion, 'all');
     }
 
     public function enqueJS($file)
     {
-        wp_enqueue_script($this->pluginSlug, PMC_PLUGIN_URL . 'assets/js/' . $file . '.js', [], $this->pluginVersion, true);
+        wp_enqueue_script($this->pluginSlug, PEMC_PLUGIN_URL . 'assets/js/' . $file . '.js', [], $this->pluginVersion, true);
     }
 
     public function divStart($class = '')

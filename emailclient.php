@@ -12,8 +12,8 @@ Text Domain: emailclient
 
 defined('WPINC') || die;
 
-define('PMC_PLUGIN_DIR', plugin_dir_path(__FILE__));
-define('PMC_PLUGIN_URL', plugin_dir_url(__FILE__));
+define('PEMC_PLUGIN_DIR', plugin_dir_path(__FILE__));
+define('PEMC_PLUGIN_URL', plugin_dir_url(__FILE__));
 
 require_once plugin_dir_path(__FILE__) . 'Load.php';
 
