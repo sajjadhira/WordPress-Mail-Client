@@ -21,7 +21,9 @@ trait Pages
 
     public function emailclient_sent()
     {
-        echo "Sent";
+        $this->enqueCSS('tailwind');
+        // require once views/inbox.php
+        require_once PEMC_PLUGIN_DIR . 'views/sent.php';
     }
 
     public function emailclient_draft()
