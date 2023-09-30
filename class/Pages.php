@@ -15,20 +15,19 @@ trait Pages
     public function emailclient_inbox()
     {
         $this->enqueCSS('tailwind');
-        // require once views/inbox.php
         require_once PEMC_PLUGIN_DIR . 'views/inbox.php';
     }
 
     public function emailclient_sent()
     {
         $this->enqueCSS('tailwind');
-        // require once views/inbox.php
         require_once PEMC_PLUGIN_DIR . 'views/sent.php';
     }
 
     public function emailclient_draft()
     {
-        echo "Draft";
+        $this->enqueCSS('tailwind');
+        require_once PEMC_PLUGIN_DIR . 'views/draft.php';
     }
 
 
