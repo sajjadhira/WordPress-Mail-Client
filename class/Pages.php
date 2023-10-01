@@ -33,7 +33,7 @@ trait Pages
 
     public function emailclient_trash()
     {
-        echo "Trash";
+        require_once PEMC_PLUGIN_DIR . 'views/trash.php';
     }
 
     public function emailclient_spam()
