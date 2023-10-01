@@ -38,7 +38,7 @@ trait Pages
 
     public function emailclient_spam()
     {
-        echo "Spam";
+        require_once PEMC_PLUGIN_DIR . 'views/spam.php';
     }
 
     public function emailclient_settings()
