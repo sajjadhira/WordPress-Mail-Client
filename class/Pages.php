@@ -43,6 +43,6 @@ trait Pages
 
     public function emailclient_settings()
     {
-        echo "Settings";
+        require_once PEMC_PLUGIN_DIR . 'views/settings.php';
     }
 }
