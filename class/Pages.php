@@ -43,6 +43,7 @@ trait Pages
 
     public function emailclient_settings()
     {
+        $this->enqueCSS('tailwind');
         require_once PEMC_PLUGIN_DIR . 'views/settings.php';
     }
 }
