@@ -35,11 +35,6 @@
         </div>
 
 
-
-        <div class="flex flex-col mb-4">
-            <label for="encryption" class="text-lg font-bold mb-2">Encryption</label>
-            <input type="text" name="encryption" id="encryption" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $encryption; ?>">
-        </div>
         <div class="flex flex-col mb-4">
             <label for="name" class="text-lg font-bold mb-2">Name</label>
             <input type="text" name="name" id="name" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $name; ?>">
