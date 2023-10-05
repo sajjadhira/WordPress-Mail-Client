@@ -1,6 +1,6 @@
 <div class="wrap">
-    <div class="flex flex-row w-full h-16 bg-gray-600 items-center">
-        <h2 class="font-bold text-3xl text-white pl-8">Settings</h2>
+    <div class="flex flex-row w-full h-16 items-center">
+        <h2 class="font-bold text-3xl text-black pl-8">Settings</h2>
     </div>
 
     <?php echo $message; ?>
