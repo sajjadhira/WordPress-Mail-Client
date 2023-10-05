@@ -3,6 +3,8 @@
         <h2 class="font-bold text-3xl text-white pl-8">Settings</h2>
     </div>
 
+    <?php echo $message; ?>
+
     <form action="" method="post" class="bg-white p-6 mt-3 mb-6 rounded-md shadow-md text-lg">
         <div class="flex flex-col mb-4">
             <label for="email" class="text-lg font-bold mb-2">Email</label>
