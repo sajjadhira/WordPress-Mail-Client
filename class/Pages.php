@@ -45,6 +45,15 @@ trait Pages
     {
 
         $message = null;
+
+        // get details from option table
+        $email = get_option($this->pluginPrefix . 'email');
+        $password = get_option($this->pluginPrefix . 'password');
+        $host = get_option($this->pluginPrefix . 'host');
+        $port = get_option($this->pluginPrefix . 'port');
+        $encryption = get_option($this->pluginPrefix . 'encryption');
+        $name = get_option($this->pluginPrefix . 'name');
+
         if (isset($_POST['submit_settings'])) {
             $nonce = $_POST['submit_settings_nonce'];
 
