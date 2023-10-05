@@ -28,8 +28,11 @@
             <label for="name" class="text-lg font-bold mb-2">Name</label>
             <input type="text" name="name" id="name" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full">
         </div>
+
+        <!-- submit nonce -->
+        <?php wp_nonce_field('submit_settings', 'submit_settings_nonce'); ?>
         <div class="flex flex-col mt-4">
-            <input type="submit" value="Save" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md cursor-pointer">
+            <input name="submit_settings" type="submit" value="Save" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md cursor-pointer">
         </div>
     </form>
 </div>
