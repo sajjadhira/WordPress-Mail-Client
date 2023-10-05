@@ -23,6 +23,19 @@
             <label for="imap_port" class="text-lg font-bold mb-2">IMAP Port</label>
             <input type="number" name="imap_port" id="imap_port" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $imap_port; ?>">
         </div>
+
+        <div class="flex flex-col mb-4">
+            <label for="smtp_host" class="text-lg font-bold mb-2">SMTP Host</label>
+            <input type="text" name="smtp_host" id="smtp_host" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $smtp_host; ?>">
+        </div>
+
+        <div class="flex flex-col mb-4">
+            <label for="smtp_port" class="text-lg font-bold mb-2">SMTP Port</label>
+            <input type="number" name="smtp_port" id="smtp_port" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $smtp_port; ?>">
+        </div>
+
+
+
         <div class="flex flex-col mb-4">
             <label for="encryption" class="text-lg font-bold mb-2">Encryption</label>
             <input type="text" name="encryption" id="encryption" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $encryption; ?>">

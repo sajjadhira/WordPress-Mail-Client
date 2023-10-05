@@ -51,6 +51,8 @@ trait Pages
         $password = get_option($this->pluginPrefix . 'password');
         $imap_host = get_option($this->pluginPrefix . 'imap_host');
         $imap_port = get_option($this->pluginPrefix . 'imap_port');
+        $smtp_host = get_option($this->pluginPrefix . 'smtp_host');
+        $smtp_port = get_option($this->pluginPrefix . 'smtp_port');
         $encryption = get_option($this->pluginPrefix . 'encryption');
         $name = get_option($this->pluginPrefix . 'name');
 
@@ -62,7 +64,7 @@ trait Pages
             }
 
             // check others input fields
-            if (empty($_POST['email']) || empty($_POST['password']) || empty($_POST['imap_host']) || empty($_POST['imap_port']) || empty($_POST['encryption']) || empty($_POST['name'])) {
+            if (empty($_POST['email']) || empty($_POST['password']) || empty($_POST['imap_host']) || empty($_POST['imap_port']) || empty($_POST['smtp_host']) || empty($_POST['smtp_port']) || empty($_POST['encryption']) || empty($_POST['name'])) {
                 $message = $this->divStart('bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-3') . $this->p('Please fill all the fields.') . $this->divEnd;
             }
 
@@ -73,6 +75,8 @@ trait Pages
                 $password = sanitize_text_field($_POST['password']);
                 $imap_host = sanitize_text_field($_POST['imap_host']);
                 $imap_port = sanitize_text_field($_POST['imap_port']);
+                $smtp_host = sanitize_text_field($_POST['smtp_host']);
+                $smtp_port = sanitize_text_field($_POST['smtp_port']);
                 $encryption = sanitize_text_field($_POST['encryption']);
                 $name = sanitize_text_field($_POST['name']);
 
@@ -81,6 +85,8 @@ trait Pages
                 update_option($this->pluginPrefix . 'password', $password);
                 update_option($this->pluginPrefix . 'imap_host', $imap_host);
                 update_option($this->pluginPrefix . 'imap_port', $imap_port);
+                update_option($this->pluginPrefix . 'smtp_host', $smtp_host);
+                update_option($this->pluginPrefix . 'smtp_port', $smtp_port);
                 update_option($this->pluginPrefix . 'encryption', $encryption);
                 update_option($this->pluginPrefix . 'name', $name);
 
