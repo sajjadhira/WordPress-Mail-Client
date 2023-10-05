@@ -15,9 +15,10 @@
             <input type="password" name="password" id="password" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $password; ?>">
         </div>
         <div class="flex flex-col mb-4">
-            <label for="host" class="text-lg font-bold mb-2">Host</label>
-            <input type="text" name="host" id="host" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $host; ?>">
+            <label for="imap_host" class="text-lg font-bold mb-2">IMAP Host</label>
+            <input type="text" name="imap_host" id="imap_host" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $imap_host; ?>">
         </div>
+
         <div class="flex flex-col mb-4">
             <label for="port" class="text-lg font-bold mb-2">Port</label>
             <input type="number" name="port" id="port" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $port; ?>">

@@ -49,7 +49,7 @@ trait Pages
         // get details from option table
         $email = get_option($this->pluginPrefix . 'email');
         $password = get_option($this->pluginPrefix . 'password');
-        $host = get_option($this->pluginPrefix . 'host');
+        $imap_host = get_option($this->pluginPrefix . 'imap_host');
         $port = get_option($this->pluginPrefix . 'port');
         $encryption = get_option($this->pluginPrefix . 'encryption');
         $name = get_option($this->pluginPrefix . 'name');
@@ -62,7 +62,7 @@ trait Pages
             }
 
             // check others input fields
-            if (empty($_POST['email']) || empty($_POST['password']) || empty($_POST['host']) || empty($_POST['port']) || empty($_POST['encryption']) || empty($_POST['name'])) {
+            if (empty($_POST['email']) || empty($_POST['password']) || empty($_POST['imap_host']) || empty($_POST['port']) || empty($_POST['encryption']) || empty($_POST['name'])) {
                 $message = $this->divStart('bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-3') . $this->p('Please fill all the fields.') . $this->divEnd;
             }
 
@@ -71,7 +71,7 @@ trait Pages
 
                 $email = sanitize_email($_POST['email']);
                 $password = sanitize_text_field($_POST['password']);
-                $host = sanitize_text_field($_POST['host']);
+                $imap_host = sanitize_text_field($_POST['imap_host']);
                 $port = sanitize_text_field($_POST['port']);
                 $encryption = sanitize_text_field($_POST['encryption']);
                 $name = sanitize_text_field($_POST['name']);
@@ -79,7 +79,7 @@ trait Pages
                 // update settings
                 update_option($this->pluginPrefix . 'email', $email);
                 update_option($this->pluginPrefix . 'password', $password);
-                update_option($this->pluginPrefix . 'host', $host);
+                update_option($this->pluginPrefix . 'imap_host', $imap_host);
                 update_option($this->pluginPrefix . 'port', $port);
                 update_option($this->pluginPrefix . 'encryption', $encryption);
                 update_option($this->pluginPrefix . 'name', $name);
