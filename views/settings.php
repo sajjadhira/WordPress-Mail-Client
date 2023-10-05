@@ -8,27 +8,27 @@
     <form action="" method="post" class="bg-white p-6 mt-3 mb-6 rounded-md shadow-md text-lg">
         <div class="flex flex-col mb-4">
             <label for="email" class="text-lg font-bold mb-2">Email</label>
-            <input type="email" name="email" id="email" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full">
+            <input type="email" name="email" id="email" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $email; ?>">
         </div>
         <div class="flex flex-col mb-4">
             <label for="password" class="text-lg font-bold mb-2">Password</label>
-            <input type="password" name="password" id="password" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full">
+            <input type="password" name="password" id="password" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $password; ?>">
         </div>
         <div class="flex flex-col mb-4">
             <label for="host" class="text-lg font-bold mb-2">Host</label>
-            <input type="text" name="host" id="host" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full">
+            <input type="text" name="host" id="host" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $host; ?>">
         </div>
         <div class="flex flex-col mb-4">
             <label for="port" class="text-lg font-bold mb-2">Port</label>
-            <input type="number" name="port" id="port" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full">
+            <input type="number" name="port" id="port" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $port; ?>">
         </div>
         <div class="flex flex-col mb-4">
             <label for="encryption" class="text-lg font-bold mb-2">Encryption</label>
-            <input type="text" name="encryption" id="encryption" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full">
+            <input type="text" name="encryption" id="encryption" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $encryption; ?>">
         </div>
         <div class="flex flex-col mb-4">
             <label for="name" class="text-lg font-bold mb-2">Name</label>
-            <input type="text" name="name" id="name" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full">
+            <input type="text" name="name" id="name" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $name; ?>">
         </div>
 
         <!-- submit nonce -->
