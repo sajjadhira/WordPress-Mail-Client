@@ -8,36 +8,36 @@
     <form action="" method="post" class="bg-white p-6 mt-3 mb-6 rounded-md shadow-md text-lg">
         <div class="flex flex-col mb-4">
             <label for="email" class="text-lg font-bold mb-2">Email</label>
-            <input type="email" name="email" id="email" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $email; ?>">
+            <input type="email" name="email" id="email" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $email; ?>" placeholder="Input email address">
         </div>
         <div class="flex flex-col mb-4">
             <label for="password" class="text-lg font-bold mb-2">Password</label>
-            <input type="password" name="password" id="password" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $password; ?>">
+            <input type="password" name="password" id="password" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $password; ?>" placeholder="Input email password">
         </div>
         <div class="flex flex-col mb-4">
             <label for="imap_host" class="text-lg font-bold mb-2">IMAP Host</label>
-            <input type="text" name="imap_host" id="imap_host" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $imap_host; ?>">
+            <input type="text" name="imap_host" id="imap_host" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $imap_host; ?>" placeholder="Example: ssl://imap.gmail.com">
         </div>
 
         <div class="flex flex-col mb-4">
             <label for="imap_port" class="text-lg font-bold mb-2">IMAP Port</label>
-            <input type="number" name="imap_port" id="imap_port" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $imap_port; ?>">
+            <input type="number" name="imap_port" id="imap_port" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $imap_port; ?>" placeholder="993">
         </div>
 
         <div class="flex flex-col mb-4">
             <label for="smtp_host" class="text-lg font-bold mb-2">SMTP Host</label>
-            <input type="text" name="smtp_host" id="smtp_host" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $smtp_host; ?>">
+            <input type="text" name="smtp_host" id="smtp_host" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $smtp_host; ?>" placeholder="Example: ssl://smtp.gmail.com">
         </div>
 
         <div class="flex flex-col mb-4">
             <label for="smtp_port" class="text-lg font-bold mb-2">SMTP Port</label>
-            <input type="number" name="smtp_port" id="smtp_port" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $smtp_port; ?>">
+            <input type="number" name="smtp_port" id="smtp_port" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $smtp_port; ?>" placeholder="465">
         </div>
 
 
         <div class="flex flex-col mb-4">
             <label for="name" class="text-lg font-bold mb-2">Name</label>
-            <input type="text" name="name" id="name" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $name; ?>">
+            <input type="text" name="name" id="name" class="border-2 border-gray-300 focus:border-blue-500 rounded-md p-2 w-full" value="<?php echo $name; ?>" placeholder="Your Name">
         </div>
 
         <!-- submit nonce -->
