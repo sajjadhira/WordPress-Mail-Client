@@ -2,6 +2,9 @@
 // import Styles
 require_once 'Base.php';
 
+// import Inbox from controllers
+
+require_once PEMC_PLUGIN_DIR . 'controllers/Inbox.php';
 
 trait Pages
 {
